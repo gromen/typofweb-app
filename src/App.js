@@ -15,7 +15,8 @@ class App extends Component {
 
   addContactHandler = () => {
     const items = [...this.state.contactItems];
-    items.push({ name: 'Rick', department: 'QA', login: 'typeofweb4' });
+
+    items.push(items[Math.floor((Math.random() * 3))]);
 
     this.setState({
       contactItems: items
